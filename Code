@@ -1,0 +1,41 @@
+class aatm:
+    def __init__(self,name,accnum,ammo,pin):
+        self.name=name
+        self.accnum=accnum
+        self.ammo=ammo
+        self.pin=pin
+    def ind(self):
+        global a
+        z=int(input("Enter the account number: "))
+        
+        for i in accnum:
+            if (i==z):
+                a=accnum.index(i)
+        print("Welcome",name[a])
+    def pi(self):
+        y=int(input("Enter the pin number: "))
+        if (y==pin[a]):
+            x=str(input("deposite (or) withdraw (or) balance: "))
+            if (x=="deposite"):
+                u=int(input("Enter the amount: "))
+                u1=ammo[a]+u
+                print("balance amount:",u1)
+            elif (x=="withdraw"):
+                u=int(input("Enter the amount: "))
+                u1=ammo[a]-u
+                print("balance amount:",u1)
+            elif (x=="balance"):
+                u1=ammo[a]
+                print("balance amount:",u1)
+        else:
+            print("Your pin is incorrect !!! ")
+                
+name=["aravind","arun","mohan"]
+accnum=[11,12,13]
+ammo=[100,100,100]
+pin=[1111,2222,3333]
+
+
+obj=aatm(name,accnum,ammo,pin)
+obj.ind()
+obj.pi()
